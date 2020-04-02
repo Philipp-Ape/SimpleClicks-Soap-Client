@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleClicks Soap Client", "SimpleClicks Soap Client\SimpleClicks Soap Client.csproj", "{B465F961-E57E-4F12-9D26-35E56D882846}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B465F961-E57E-4F12-9D26-35E56D882846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B465F961-E57E-4F12-9D26-35E56D882846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B465F961-E57E-4F12-9D26-35E56D882846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B465F961-E57E-4F12-9D26-35E56D882846}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21631A28-9CE0-4C0B-BD4A-9AEAE304B4AF}
+	EndGlobalSection
+EndGlobal
