@@ -1,13 +1,16 @@
-﻿using System.Xml.Serialization;
+﻿using System;
+using System.Xml.Serialization;
 
 namespace SimpleClicks.Model
 {
 
-	[XmlRoot("getClientResponse", Namespace = "http://sequisoft.de/")]
+	[Serializable, XmlRoot("getClientResponse", Namespace = "http://sequisoft.de/")]
 	public class GetClientResponse
 	{
 
-		[XmlElement("return", Namespace = "")] public Client? Client { get; set; }
+		[XmlElement("return", Namespace = "")] public SimpleClicksClient? Client { get; set; }
+
+		public override string ToString() => Client?.ToString() ?? GetType().ToString();
 
 	}
 

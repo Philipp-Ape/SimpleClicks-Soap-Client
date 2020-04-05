@@ -7,13 +7,13 @@
     <RootNamespace>SimpleClicks</RootNamespace>
     <Authors>Philipp Ape</Authors>
     <Description>A library for client queries via soap in SimpleClicks.</Description>
-    <Version>0.0.1</Version>
+    <Version>0.1.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>SimpleClicksSoapClient</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SoapSerializer" Version="0.1.0" />
+    <PackageReference Include="SoapSerializer" Version="0.2.1" />
   </ItemGroup>
 
 </Project>

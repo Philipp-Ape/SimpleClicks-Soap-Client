@@ -8,7 +8,7 @@ namespace SimpleClicks.Model
 	public class GetDevicesRequest
 	{
 
-		[XmlElement("agentId")] public Guid? AgentId { get; set; }
+		[XmlElement("agentId")] public Guid AgentId { get; set; }
 		[XmlElement("managed")] public bool Managed { get; set; }
 
 		public GetDevicesRequest() { }

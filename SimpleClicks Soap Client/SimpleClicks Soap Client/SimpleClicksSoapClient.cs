@@ -4,7 +4,9 @@ using System;
 using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 using System.Xml.Soap.Serialization;
 
@@ -81,6 +83,22 @@ namespace SimpleClicks
 			using HttpResponseMessage response = await HttpClient.SendAsync(request);
 			using Stream stream = await response.Content.ReadAsStreamAsync();
 			return await Serializer.Deserialize<T>(stream);
+		}
+
+		public async Task<XDocument> Request(object value)
+		{
+			using MemoryStream buffer = new MemoryStream();
+			using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, EmptyUri)
+			{
+				Content = new StreamContent(buffer)
+			};
+
+			await Serializer.Serialize(buffer, value);
+			buffer.Seek(0, SeekOrigin.Begin);
+
+			using HttpResponseMessage response = await HttpClient.SendAsync(request);
+			using Stream stream = await response.Content.ReadAsStreamAsync();
+			return await XDocument.LoadAsync(stream, LoadOptions.None, CancellationToken.None);
 		}
 
 		protected virtual void Dispose(bool disposing)

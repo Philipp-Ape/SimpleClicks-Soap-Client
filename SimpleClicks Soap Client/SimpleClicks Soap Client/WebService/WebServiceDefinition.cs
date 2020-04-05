@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace SimpleClicks.WebService
 {
@@ -11,6 +12,7 @@ namespace SimpleClicks.WebService
 
 		[XmlAttribute("targetNamespace")] public string? TargetNamespace { get; set; }
 		[XmlElement("service")] public WebService? Service { get; set; }
+		[XmlElement("message")] public List<Message>? Messages { get; set; }
 
 		public override string ToString() => TargetNamespace ?? GetType().ToString();
 
